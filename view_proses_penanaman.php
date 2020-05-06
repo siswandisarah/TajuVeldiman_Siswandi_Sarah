@@ -4,7 +4,7 @@
       <div class="card mb-3 col-md-10 mx-auto my-2 px-3 py-2">
         <div class="row my-2">
           <div class="col-md-6">
-           
+            <button class = "btn btn-primary" data-toggle="modal" data-target="#exampleModal"> <i class ="fa fa-plus"></i> Tambah Proses</button>
           </div>
           <div class="col-md-6">
             <!-- SEARCH FORM -->
@@ -37,7 +37,8 @@
         <h5 class="card-title"><th>nama proses adalah : </th><?php echo $prs['nama']; ?></h5><br>
         <h5 class="card-title"><th>Nama Petani : </th><?php echo $prs['nama_petani']; ?></h5><br>
         <h5 class="card-title"><th>Alamat : </th><?php echo $prs['alamat']; ?></h5><br>
-        <a href="<?=base_url();?>Admin/proses_penanaman_dan_proses_panen/proses_detail1/<?=$prs['id'];?>"   class ="btn btn-xs btn-success"><i class="fa fa-search-plus"></i></a>
+        <a href="<?=base_url();?>/rw/proses_penanaman_dan_proses_panen/proses_hapus1/<?=$prs['id'];?>"class ="btn btn-xs btn-danger" class = "btn btn-danger"><i class = "fa fa-trash"></i></a>
+        <a href="<?=base_url();?>/rw/proses_penanaman_dan_proses_panen/proses_detail1/<?=$prs['id'];?>"   class ="btn btn-xs btn-success"><i class="fa fa-search-plus"></i></a>
        
       </div>
     </div>
@@ -52,6 +53,50 @@
       
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
- 
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">tambah proses pemanenan atau proses penanaman</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+      <?php echo form_open_multipart('/rw/proses_penanaman_dan_proses_panen/tambah_aksi3');?>
+      <div class = "form-group">
+            <label> Nama proses :</label>
+            <input type="text" name= "nama" class= "form-control">
+      </div>
+      <div class = "form-group">
+            <label> Nama petani :</label>
+            <input type="text" name= "nama_petani" class= "form-control">
+      </div> <div class = "form-group">
+            <label> alamat :</label>
+            <input type="text" name= "alamat" class= "form-control">
+      </div>
+
+      <div class = "form-group">
+            <label>Upload foto</label>
+            <input type="file" name= "foto" class= "form-control">
+      </div>
+
+      <div class = "form-group">
+            <label> masukan deskripsi :</label>
+            <input type="text" name= "deskription" class= "form-control">
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Keluar</button>
+        <button type="submit" class="btn btn-primary">Tambahkan</button>
+      </div>
+
+      <?php echo form_close(); ?>
+     
+
+      </div>
+     
+    </div>
+  </div>
 </div>
 

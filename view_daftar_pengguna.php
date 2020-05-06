@@ -1,6 +1,6 @@
-<div class="content-wrapper" style="margin-left: 0;">
+  <div class="content-wrapper" style="margin-left: 0;">
     <section class="content">
-      <h3 class="text-center py-5">DAFTAR PENGGUNA</h3>
+      <h3 class="text-center py-5">DAFTAR PENGGUNA APLIKASI</h3>
       <div class="card col-md-9 mb-3 mx-auto">
         <table class="table">
               <tr>
@@ -24,11 +24,8 @@
                       <td><?php echo $pga['desa']; ?></td>
                       <td><?php echo $pga['dusun']; ?></td>
                       <td><?php echo $pga['email']; ?></td>
-               
-                <td>
-                <a href="<?=base_url();?>/admin/user/hapus/<?=$pga['id'];?>"   class ="btn btn-xs btn-danger" class = "btn btn-danger"><i class = "fa fa-trash"></i></a>
-                </td>
                 </tr>
+
               <?php endforeach; ?>
              </table>
       </div>

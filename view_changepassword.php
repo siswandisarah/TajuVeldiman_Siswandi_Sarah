@@ -3,7 +3,7 @@
           <h3 class="text-center py-5">CHANGE PASSWORD</h3>
           <div class="card col-md-4 mb-3 mx-auto">
        
-        <form  action = "<?php echo site_url().'admin/user/changepassword'; ?>" method = "post">
+        <form  action = "<?php echo site_url().'rw/user/changepassword'; ?>" method = "post">
         <?= $this->session->flashdata('message'); ?>
         <div class="form-group">
          <label for="current_password">Current Password</label>

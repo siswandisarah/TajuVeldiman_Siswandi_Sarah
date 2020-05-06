@@ -30,7 +30,7 @@
           </table>
         </div>
         <div class="card-footer">
-          <a class="btn btn-primary" href="<?php echo site_url('/admin/proses_penanaman_dan_proses_panen')?>">Back</a>
+          <a class="btn btn-primary" href="<?php echo site_url('/Rw/proses_penanaman_dan_proses_panen')?>">Back</a>
         </div>
     </section>
 </div>
